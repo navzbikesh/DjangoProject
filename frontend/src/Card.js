@@ -8,19 +8,20 @@ export default function Card({ title, imageUrl, body }) {
     navigate(path);
   };
   */
+  console.log(imageUrl);
   const navigate = useNavigate();
 
   let navigateurl = "/" + title.toString().toLowerCase();
   console.log(navigateurl);
 
   return (
-    <div className="card">
-      <img src={imageUrl} className="card-img-top" alt="..." />
-      <div className="card-title">
-        <h1>{title}</h1>
-      </div>
-      <div className="card-body">
-        <p className="card-text">{body}</p>
+    <div className="">
+      <img src={imageUrl} alt="Avatar" className="card_holder" />
+      <div className="container">
+        <h4>
+          <b>{title}</b>
+        </h4>
+        <p>{body}</p>
         <button onClick={() => navigate(navigateurl)}>{title}</button>
       </div>
     </div>

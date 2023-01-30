@@ -10,17 +10,21 @@ function App() {
   return (
     <div>
       <BrowserRouter>
-        <div className="row_container">
-          <div className="row_elements">
-            <Card title="Users"></Card>
+        <div className="row">
+          <div class="column">
+            <Card title="Users" imageUrl="/assets/images/Users.png"></Card>
           </div>
-          <div className="row_elements">
-            <Card title="Vehicles"></Card>
+          <div class="column">
+            <Card
+              title="Vehicles"
+              imageUrl="/assets/images/Vehicles.png"
+            ></Card>
           </div>
-          <div className="row_elements">
-            <Card title="Trips"></Card>
+          <div class="column">
+            <Card title="Trips" imageUrl="/assets/images/Trips.png"></Card>
           </div>
         </div>
+
         <Routes>
           <Route path="/users" element={<Users />} />
 
